@@ -7,7 +7,7 @@ to the GitHub space where WordPress teams coordinate content to be published on 
 - [About Page](https://developer.wordpress.org/news/about/)
 - [The Project Board](https://github.com/orgs/WordPress/projects/44/).
 
-For discussion, questions and meetings, please join the WordPress [#core-dev-blog](https://wordpress.slack.com/archives/C03RL47B3S8) channel. Editorial Group meetings are held every first Thursday of the month. 
+For discussion, questions and meetings, please join the WordPress [#core-dev-blog](https://wordpress.slack.com/archives/C03RL47B3S8) channel. Editorial Group meetings are held every first Thursday of the month. Meeting notes are published on the [Make Core Blog with the tag #core-dev-blog](https://make.wordpress.org/core/tag/core-dev-blog/)
 
 ## Background
 
