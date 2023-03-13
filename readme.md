@@ -9,6 +9,8 @@ to the GitHub space where WordPress teams coordinate content to be published on 
 
 For discussion, questions and meetings, please join the WordPress [#core-dev-blog](https://wordpress.slack.com/archives/C03RL47B3S8) channel. Editorial Group meetings are held every first Thursday of the month. Meeting notes are published on the [Make Core Blog with the tag #core-dev-blog](https://make.wordpress.org/core/tag/core-dev-blog/)
 
+Any suggestions/issues for the Developer Blog (bugs, design enhancements...) can be reported in the form of an issue in https://github.com/WordPress/wporg-developer-blog/issues
+
 ## Background
 
 - The proposal to [create a Developer Blog](https://make.wordpress.org/core/2022/02/25/proposal-to-start-a-news-blog-on-developer-wordpress-org/) was published in February 2022
