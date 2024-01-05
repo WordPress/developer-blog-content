@@ -1,0 +1,13 @@
+name: Notify users based on roundup label
+on: 
+  issues:
+    types: [labeled]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps: 
+        - uses: jenschelkoph/issue-label-notification-action@1.3
+          with:
+            recipients: |
+                roundup=@bph
