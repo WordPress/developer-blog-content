@@ -11,4 +11,4 @@ jobs:
           with:
             recipients: |
                 Monthly Roundup=@bph
-            message: 'Heads-up {receipients}: To include your news for developers, please add a comment on this issue. Deadline 8th of next month'
+            message: 'Heads-up {recipients}: To include your project news for developers, please add a comment on this issue. Deadline 8th of next month'
