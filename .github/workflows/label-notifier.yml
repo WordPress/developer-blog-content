@@ -9,6 +9,6 @@ jobs:
     steps: 
         - uses: jenschelkopf/issue-label-notification-action@1.3
           with:
-            message: 'Heads-up {receipients}, to include news for developers, please add a commnet on this issue. Deadline 8th of next month'
             recipients: |
                 Monthly Roundup=@bph
+            message: 'Heads-up {receipients}: To include your news for developers, please add a comment on this issue. Deadline 8th of next month'
