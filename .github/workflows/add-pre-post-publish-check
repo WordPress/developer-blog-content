@@ -10,7 +10,7 @@ jobs:
     permissions:
       issues: write
     steps:
-      - name: Add comment
+      - name: Add pre and post publishing check list as comment
         run: gh issue comment "$NUMBER" --body "$BODY"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
