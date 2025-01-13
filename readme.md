@@ -1,6 +1,6 @@
 # Welcome 
 
-to the GitHub space where WordPress teams coordinate content to be published on the [Developer Blog](https://developer.wordpress.org/news/). The Developer Blog is now in public beta.
+to the GitHub space where WordPress teams coordinate content to be published on the [Developer Blog](https://developer.wordpress.org/news/).
 
 - [How to contribute](https://developer.wordpress.org/news/how-to-contribute/)
 - [Tips and guidelines for Writers](https://developer.wordpress.org/news/tips-and-guidelines-for-writers/)
