@@ -5,7 +5,7 @@ on:
 
 jobs:
   add-comment:
-    if: github.event.label.name == 'flow: ready to publish'
+    if: ${{ github.event.label.name == 'flow: ready to publish' }}
     runs-on: ubuntu-latest
     permissions:
       issues: write
@@ -16,7 +16,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
           NUMBER: ${{ github.event.issue.number }}
-          BODY: >### Pre-publishing checklist: (updated 12/09/2024)
+          BODY: >### Pre-publishing checklist
 - [ ] Post Title and subheaders in sentence case
 - [ ] Are Category or Categories selected?
 - [ ] Are Tags identifies?
