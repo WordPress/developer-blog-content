@@ -5,7 +5,7 @@ on:
 
 jobs:
   add-comment:
-    if: ${{ github.event.label.name == 'flow: ready to publish' }}
+    if: ${{ github.event.label.name == 'flow-ready to publish' }}
     runs-on: ubuntu-latest
     permissions:
       issues: write
