@@ -1,0 +1,36 @@
+name: Add pre and post publishing check list as comment
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  add-comment:
+    if: github.event.label.name == 'flow: ready to publish'
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Add pre and post publishing check list as comment
+        run: gh issue comment "$NUMBER" --body "$BODY"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          NUMBER: ${{ github.event.issue.number }}
+          BODY: >### Pre-publishing checklist: (updated 12/09/2024)
+- [ ] Post Title and subheaders in sentence case
+- [ ] Are Category or Categories selected?
+- [ ] Are Tags identifies?
+- [ ] Is there an explicit Excerpt?
+- [ ] Are all images files uploaded to the media library
+- [ ] Do all images have an alt-text?
+- [ ] For TOC us the Pattern under _Developer Blog > Table of contents_
+- [ ] Assign or upload a featured image
+- [ ] Props added? (See [Guidelines](https://make.wordpress.org/core/handbook/best-practices/post-comment-guidelines/#giving-proper-credit-props))
+- [ ] add **copy for a social post** as comment to this issue ([example](https://github.com/WordPress/developer-blog-content/issues/152#issuecomment-1654259045))
+🙌 Publish! 📗
+
+### Post-publishing checklist
+- [ ] add Props for reviews to #props channel in WP Slack ([Example](https://wordpress.slack.com/archives/C0FRG66LR/p1689098122307029)) (use Slack handles) 
+- [ ] Add the label "post to social" to the issue
+- [ ] close the issue with a comment to link to the published post
+- [ ] close the accompanying discussion with the link to the published post. 
