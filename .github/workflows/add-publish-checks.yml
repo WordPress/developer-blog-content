@@ -17,6 +17,6 @@ jobs:
           GH_REPO: ${{ github.repository }}
           NUMBER: ${{ github.event.issue.number }}
           BODY: | 
-                Pre-publishing checklist
+                ### Pre-publishing checklist
                 - [ ] Post Title and subheaders in sentence case
 
