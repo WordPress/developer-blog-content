@@ -19,4 +19,14 @@ jobs:
           BODY: | 
                 ### Pre-publishing checklist
                 - [ ] Post Title and subheaders in sentence case
+                - [ ] Are Category or Categories selected?
+                - [ ] Are Tags identifies?
+                - [ ] Is there an explicit Excerpt?
+                - [ ] Are all images files uploaded to the media library
+                - [ ] Do all images have an alt-text?
+                - [ ] For TOC us the Pattern under _Developer Blog > Table of contents_
+                - [ ] Assign or upload a featured image
+                - [ ] Props added? (See [Guidelines](https://make.wordpress.org/core/handbook/best-practices/post-comment-guidelines/#giving-proper-credit-props))
+                - [ ] add **copy for a social post** as comment to this issue ([example](https://github.com/WordPress/developer-blog-content/issues/152#issuecomment-1654259045))
+
 
