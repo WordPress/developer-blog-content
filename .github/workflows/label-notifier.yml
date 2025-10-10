@@ -12,4 +12,4 @@ jobs:
             recipients: |
                 Monthly Roundup=@bph @adamziel @bgrgicak @jonathanbossenger @alexapeduzzi @fellyph
 
-            message: 'Heads-up {recipients}: To include your project''s **news for developers**, please add the information or a link as a comment to this issue. Deadline 5th of next month'
+            message: 'Heads-up {recipients}: To include your project''s **news for developers**, please add the information or a link as a comment to this issue. **Deadline 5th of next month**'
