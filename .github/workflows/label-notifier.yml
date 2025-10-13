@@ -17,8 +17,7 @@ jobs:
         with:
           script: |
             const recipients = ['@bph', '@adamziel', '@jonathanbossenger', '@alexapeduzzi', '@fellyph'];
-            const message = `Heads-up ${recipients.join(' ')}: To include your project''s **news for developers**, please add the information or a link as a comment to this issue. 
-            **Deadline 5th of next month.**`;
+            const message = `Heads-up ${recipients.join(' ')}: To include your project''s **news for developers**, please add the information or a link as a comment to this issue.\n**Deadline 5th of next month.**`;
             
             await github.rest.issues.createComment({
               owner: context.repo.owner,
