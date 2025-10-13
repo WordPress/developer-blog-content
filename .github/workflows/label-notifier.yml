@@ -5,6 +5,8 @@ on:
   schedule:
     # Run daily at 9 AM UTC to check for 20-day-old issues
     - cron: '0 9 * * *'
+env:
+  RECIPIENTS: '@bph @adamziel @jonathanbossenger @alexapeduzzi @fellyph'
 
 jobs:
   # Initial notification when label is applied
@@ -16,8 +18,8 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const recipients = ['@bph', '@adamziel', '@jonathanbossenger', '@alexapeduzzi', '@fellyph'];
-            const message = `Heads-up ${recipients.join(' ')}: To include your project''s **news for developers**, please add the information or a link as a comment to this issue.\n**Deadline 5th of next month.**`;
+            const recipients = process.env.RECIPIENTS
+            const message = `Heads-up ${recipients}: To include your project''s **news for developers**, please add the information or a link as a comment to this issue.\n**Deadline 5th of next month.**`;
             
             await github.rest.issues.createComment({
               owner: context.repo.owner,
@@ -35,7 +37,7 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const recipients = ['@bph', '@adamziel', '@jonathanbossenger', '@alexapeduzzi', '@fellyph'];
+            const recipients = process.env.RECIPIENTS;
             
             // Get the single open Monthly Roundup issue (if it exists)
             const issues = await github.rest.issues.listForRepo({
@@ -80,9 +82,7 @@ jobs:
             }
             
             // Send the follow-up notification
-            const message = `📢 Reminder
-            
-${recipients.join(' ')} The publication deadline is approaching (5th of the month).`;
+            const message = `📢 Reminder ${recipients} The publication deadline is approaching (5th of the month).`;
             
             await github.rest.issues.createComment({
               owner: context.repo.owner,
