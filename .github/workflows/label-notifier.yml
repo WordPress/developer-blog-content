@@ -83,7 +83,7 @@ jobs:
             // Send the follow-up notification
             const message = `📢 Reminder
             
-${recipients.join(' ')} The publication deadline is approaching(5th of the month).`;
+${recipients.join(' ')} The publication deadline is approaching (5th of the month).`;
             
             await github.rest.issues.createComment({
               owner: context.repo.owner,
