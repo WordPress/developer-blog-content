@@ -25,7 +25,7 @@ jobs:
                 - [ ] Are all images files uploaded to the media library
                 - [ ] Do all images have an alt-text?
                 - [ ] For TOC us the Pattern under _Developer Blog > Table of contents_
-                - [ ] Assign or upload a featured image
+                - [ ] Assign or upload a featured image ([Figma templates to get started](https://docs.google.com/presentation/d/1vFbR8utQi0x3HDSX1L5QD1N05gM2tTF_7sOEmjd0c2g/edit?slide=id.g3a1f1fd0451_0_1#slide=id.g3a1f1fd0451_0_1))
                 - [ ] Props added? (See [Guidelines](https://make.wordpress.org/core/handbook/best-practices/post-comment-guidelines/#giving-proper-credit-props))
                       🙌 Publish! 📗
                 ### Post-publishing checklist
