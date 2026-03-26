@@ -63,6 +63,9 @@ jobs:
 
             console.log(`✅ Created issue #${issue.data.number}: ${title}`);
 
+            // Wait briefly for the issue to be fully available
+            await new Promise(resolve => setTimeout(resolve, 3000));
+
             // Notify editors to update Google Doc and author
             await github.rest.issues.createComment({
               owner: context.repo.owner,
