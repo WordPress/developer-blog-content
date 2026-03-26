@@ -82,7 +82,7 @@ jobs:
             }
             
             // Send the follow-up notification
-            const message = `📢 Reminder ${recipients} The publication deadline is approaching (5th of the month).`;
+            const message = `📢 20-Day Follow-up Reminder ${recipients} The publication deadline is approaching (5th of the month).`;
             
             await github.rest.issues.createComment({
               owner: context.repo.owner,
