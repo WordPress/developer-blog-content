@@ -1,0 +1,33 @@
+name: Keep workflows alive
+
+on:
+  schedule:
+    # Run on the 1st of every month at midnight UTC
+    - cron: '0 0 1 * *'
+  workflow_dispatch:
+
+concurrency:
+  group: keepalive
+  cancel-in-progress: true
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: trunk
+
+      - name: Update keepalive timestamp
+        run: date -u '+%Y-%m-%dT%H:%M:%SZ' > .github/.keepalive
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/.keepalive
+          git diff --staged --quiet && echo "No changes" && exit 0
+          git commit -m "Update keepalive timestamp"
+          git push
