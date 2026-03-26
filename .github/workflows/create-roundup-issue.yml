@@ -59,3 +59,11 @@ jobs:
             });
 
             console.log(`✅ Created issue #${issue.data.number}: ${title}`);
+
+            // Notify editors to update Google Doc and author
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue.data.number,
+              body: '@justintadlock @bph Please update the **Google Doc** link and assign an **Author** for this edition.'
+            });
