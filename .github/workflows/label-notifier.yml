@@ -9,7 +9,14 @@ env:
   RECIPIENTS: '@bph @adamziel @jonathanbossenger @alexapeduzzi @fellyph'
 
 jobs:
-  # Initial notification when label is applied
+  # Initial notification when the Monthly Roundup label is applied manually.
+  #
+  # NOTE: For the normal monthly cycle, the heads-up comment is posted directly
+  # by create-roundup-issue.yml when it auto-creates the next issue. GitHub
+  # Actions does not chain workflows triggered by GITHUB_TOKEN, so the
+  # 'labeled' event from the bot-created issue does not reach this job.
+  # This job exists as a fallback for off-cycle / manually-created roundup
+  # issues. Keep the message text in sync with create-roundup-issue.yml.
   initial-notification:
     if: github.event_name == 'issues' && contains(github.event.issue.labels.*.name, 'Monthly Roundup')
     runs-on: ubuntu-latest

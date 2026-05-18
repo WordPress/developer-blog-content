@@ -4,6 +4,9 @@ on:
   issues:
     types: [closed]
 
+env:
+  RECIPIENTS: '@bph @adamziel @jonathanbossenger @alexapeduzzi @fellyph'
+
 jobs:
   create-next-issue:
     if: >-
@@ -72,4 +75,16 @@ jobs:
               repo: context.repo.repo,
               issue_number: issue.data.number,
               body: '@justintadlock @bph Please update the **Google Doc** link and assign an **Author** for this edition.'
+            });
+
+            // Heads-up notification to contributors.
+            // Posted here because the 'labeled' event from this bot-created
+            // issue does not trigger label-notifier.yml (GitHub Actions does
+            // not chain workflows triggered by GITHUB_TOKEN).
+            const recipients = process.env.RECIPIENTS;
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue.data.number,
+              body: `Heads-up ${recipients}: To include your project's **news for developers**, please add the information or a link as a comment to this issue.\n**Deadline 5th of next month.**`
             });
